@@ -1,0 +1,19 @@
+//Q3) 홀수, 짝수 판별하기
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	if (a%2 == 0)
+	{
+		printf("짝수\n");
+	}
+	else
+	{
+		printf("홀수\n");
+	}
+	return 0;
+}
+
