@@ -1,0 +1,30 @@
+//Q6) 성적 비교 프로그램
+//세 학생의 점수를 입력받아, 1등 학생의 점수와 이름을 출력하시오.
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main() {
+    char name[3][20];
+    int score[3];
+
+    char* top_name = NULL;
+    int max_score = -1;
+
+    for (int i = 0; i < 3; i++) {
+        printf("학생의 이름을 입력하세요: ");
+        scanf("%s", name[i]);
+
+        printf("학생 %s의 성적을 입력하세요: ", name[i]);
+        scanf("%d", &score[i]);
+
+        if (score[i] >= max_score) {
+            max_score = score[i];
+            top_name = name[i];
+        }
+    }
+
+    printf("\n1등 학생은 %s입니다. (성적: %d)\n", top_name, max_score);
+
+    return 0;
+}
+
