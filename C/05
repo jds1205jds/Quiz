@@ -1,0 +1,40 @@
+//Q5) 잔돈 계산 프로그램
+//사용자로부터 물건 가격과 지불 금액을 입력받아, 거스름돈을 계산하고 1000원, 500원, 100원짜리 동전이 각각 몇 개 필요한지 출력하시오.
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+int price;
+int paid;
+int result;
+int paper;
+
+printf("물건 가격을 입력하세요: ");
+scanf("%d", &price);
+
+printf("지불 금액을 입력하세요: ");
+scanf("%d", &paid);
+
+result = paid - price;
+printf("거스름돈은 %d 입니다", result);
+
+if (result >= 1000) {
+paper = result / 1000;
+result %= 1000;
+printf("1000원은 %d장, ", paper);
+}
+if (result >= 500) {
+paper = result / 500;
+result %= 500;
+printf("500원은 %d장, ", paper);
+}
+if (result >= 100) {
+paper = result / 100;
+result %= 100;
+printf("100원은 %d장", paper);
+}
+
+return 0;
+
+}
